@@ -161,8 +161,8 @@ string ariel::Notebook::read(unsigned int page, unsigned int row, unsigned int c
 /**
  * Method shows the page by a given index.
  * The representation of the page determined according to the example representation in Demo.cpp file.
-
-   E.G.:      1:   _________
+   E.G.:
+              1:   _________
 		      2:   ___~_____
 		      3:   __a~cd___
 		      4:   ___~_____
