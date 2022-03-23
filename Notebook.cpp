@@ -31,6 +31,13 @@ void ariel::Notebook::write(unsigned int page, unsigned int row, unsigned int co
         currPage =_pages.at(page);
     }
     catch (exception) { // Page doesn't exist
+        // Create pages before page index if they haven't created yet.
+        if(_pages.size() < page){
+            for (int i = 0; i < page; ++i) {
+                string newPage = createNewLine("");
+                _pages.insert(_pages.begin() + i, newPage);
+            }
+        }
         string newPage = createNewLine("");
         _pages.insert(_pages.begin() + page, newPage);
         currPage = _pages.at(page);
